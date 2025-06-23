@@ -16,20 +16,8 @@ body {
     border-radius: 50%;
     position: relative;
     color: white;
-}
-
-.clock-wrapper {
-    --border-size: 840px; /* slightly bigger than the clock */
-    width: var(--border-size);
-    height: var(--border-size);
-    border-radius: 50%;
-    background: white; /* border color */
-    padding: 20px; /* spacing between border and clock */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    box-shadow: 0 0 30px #29ff08aa; /* optional glow for effect */
+    border: 10px solid white; /* simple white ring */
+    box-shadow: 0 0 25px #29ff08aa; /* optional glow */
 }
 
 .spike {
@@ -108,6 +96,6 @@ body {
     left: -10px;
     top: 50%;
     border-radius: 40px 0 0 40px;
-    width: calc(var(--clock-size) / 3.25);
+    width: calc(var(--clock-size) / 3.5);
     transform: translateY(-50%);
 }
