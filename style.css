@@ -96,6 +96,6 @@ body {
     left: -10px;
     top: 50%;
     border-radius: 40px 0 0 40px;
-    width: calc(var(--clock-size) / 3.66);
+    width: calc(var(--clock-size) / 3.4); /* increase for shorter indicator */
     transform: translateY(-50%);
 }
