@@ -8,7 +8,7 @@ body {
 }
 
 .clock {
-    --clock-size: 800px;
+    --clock-size: 600px;
     width: var(--clock-size);
     height: var(--clock-size);
     font-family: "Comfortaa", sans-serif;
@@ -96,6 +96,6 @@ body {
     left: -10px;
     top: 50%;
     border-radius: 40px 0 0 40px;
-    width: calc(var(--clock-size) / 3.5);
+    width: calc(var(--clock-size) / 3.66);
     transform: translateY(-50%);
 }
