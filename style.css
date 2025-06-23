@@ -18,6 +18,20 @@ body {
     color: white;
 }
 
+.clock-wrapper {
+    --border-size: 840px; /* slightly bigger than the clock */
+    width: var(--border-size);
+    height: var(--border-size);
+    border-radius: 50%;
+    background: white; /* border color */
+    padding: 20px; /* spacing between border and clock */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    box-shadow: 0 0 30px #29ff08aa; /* optional glow for effect */
+}
+
 .spike {
     z-index: 5;
     position: absolute;
