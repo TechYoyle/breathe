@@ -21,20 +21,24 @@ for (let s = 0; s < 60; s++) {
 let minuteAngle = 0;
 let secondAngle = 0;
 
-function getTime() {
-    const date = new Date();
-    const s = date.getSeconds();
-    const m = date.getMinutes();
+function updateClock() {
+    const now = new Date();
 
-    hour.textContent = date.getHours();
-    minute.textContent = m;
+    const milliseconds = now.getMilliseconds();
+    const secondsValue = now.getSeconds() + milliseconds / 1000;
+    const minutesValue = now.getMinutes() + secondsValue / 60;
+    const hoursValue = now.getHours() % 12 + minutesValue / 60;
+    const secondAngle = secondsValue * 6;
+    const minuteAngle = minutesValue * 6;
+    const hourAngle = hoursValue * 30;
 
-    minuteAngle += s === 0 ? 6 : 0;
-    minutes.style = `--dRotate :${minuteAngle}deg`;
+    seconds.style.setProperty('--dRotate', `${secondAngle}deg`);
+    minutes.style.setProperty('--dRotate', `${minuteAngle}deg`);
 
-    secondAngle += 6;
-    seconds.style = `--dRotate:${secondAngle}deg`;
+    hour.textContent = now.getHours();
+    minute.textContent = now.getMinutes();
+
+    requestAnimationFrame(updateClock);
 }
 
-getTime();
-setInterval(getTime, 1000);
+updateClock(); // Start animation loop
