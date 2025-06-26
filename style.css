@@ -5,6 +5,13 @@
 
 body {
     background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; 
+    position: relative;
 }
 
 .clock {
@@ -22,7 +29,7 @@ body {
 .sun-crown {
     position: absolute;
     top: -300px;
-    left: -290px;
+    left: -300px;
     width: calc(100% + 600px);
     height: calc(100% + 600px);
     object-fit: contain;
