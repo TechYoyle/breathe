@@ -24,6 +24,14 @@ let secondAngle = 0;
 function updateClock() {
     const now = new Date();
 
+    const currentHour = now.getHours();
+    let day = currentHour >= 7 && currentHour < 19;
+
+    document.body.style.backgroundColor = day ? "skyblue" : "black";
+
+    const moon = document.getElementById("giant-moon");
+    moon.style.display = day ? "none" : "block";
+    
     const milliseconds = now.getMilliseconds();
     const secondsValue = now.getSeconds() + milliseconds / 1000;
     const minutesValue = now.getMinutes() + secondsValue / 60;
@@ -41,4 +49,4 @@ function updateClock() {
     requestAnimationFrame(updateClock);
 }
 
-updateClock(); // Start animation loop
+updateClock();
