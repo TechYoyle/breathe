@@ -30,7 +30,10 @@ function updateClock() {
     document.body.style.backgroundColor = day ? "skyblue" : "black";
 
     const moon = document.getElementById("giant-moon");
-    moon.style.display = day ? "none" : "block";
+    const sun = document.getElementById("sun-crown");
+
+    moon.style.opacity = day ? "0" : "1";
+    sun.style.opacity = day ? "1" : "0";
     
     const milliseconds = now.getMilliseconds();
     const secondsValue = now.getSeconds() + milliseconds / 1000;
@@ -46,7 +49,9 @@ function updateClock() {
     hour.textContent = now.getHours();
     minute.textContent = now.getMinutes();
 
+    
     requestAnimationFrame(updateClock);
+
 }
 
 updateClock();

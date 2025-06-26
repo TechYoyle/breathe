@@ -19,17 +19,29 @@ body {
     border: 10px solid white; /* simple white ring */
     box-shadow: 0 0 25px beige; /* optional glow */
 }
+.sun-crown {
+    position: absolute;
+    top: -300px;
+    left: -290px;
+    width: calc(100% + 600px);
+    height: calc(100% + 600px);
+    object-fit: contain;
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
 
 .giant-moon {
     position: absolute;
+    bottom: 0px;
     left: 53%;
-    bottom: 0px; /* tweak this for perfect placement */
     transform: translateX(-50%);
-    height: 610px; /* size to match clock border glow */
-    display: none;
-    pointer-events: none;
+    height: 600px;
     z-index: 0;
-    opacity: 0.8; /* optional for soft blending */
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
 }
 
 .spike {
